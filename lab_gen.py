@@ -66,6 +66,5 @@ def printf(matrix):
     print(*matrix, sep='\n')
 
 
-# printf(gen_lab_1(10, 10))
 with open('.\\labs\\test2.lab', 'wb') as f:
-    pickle.dump(gen_lab_1(50, 50), f)
+    pickle.dump(gen_lab_1(25, 25), f)

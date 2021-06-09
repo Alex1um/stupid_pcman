@@ -1,5 +1,6 @@
 from engine import *
 import math
+import time
 import random
 
 
@@ -68,6 +69,13 @@ class Pacmen(GameArea):
             self.set_image('data\\megafood.png', size_mode="%obj")
             self.image_index = 1
             self.adopt(res)
+
+        def update(self, rs):
+            if self.cls.area[self.pos[1]][self.pos[0]] == 2:
+                self.cls.play_sound('pc1')
+                self.cls.stat.text = str(int(self.cls.stat.text) + 100)
+                self.cls.objects.remove(self)
+                del self
 
     class Pacmen(RadialObject):
 
@@ -171,6 +179,12 @@ class Pacmen(GameArea):
         if len(way) == 1:
             way = []
         return way[::-1]
+
+    def xmode(self):
+        self.mode = True
+        time.sleep(30)
+        self.mode = False
+
 
     def brains(self):
 
