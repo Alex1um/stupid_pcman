@@ -2,7 +2,7 @@
 Full game on a custom "engine" written with Pygame
 
 ---
-To run need to write file from "labs" directory
+To run need to input file from "labs" directory
 ---
 Map generator included. Run "lab_gen.py"
 ---
